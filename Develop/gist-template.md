@@ -58,9 +58,13 @@ followed by a ., then:
 
 The characters ^ and $ are considered anchors.
 
-^ signifies a string that begins with the characters that follow it. An example, "^pie" will find any words that contain the letters 'p', 'i', and 'e' in that order, like 'piece'. The anchor, ^, will find words that contain the characters that immediately follow it.
+```
+'^' signifies a string that begins with the characters that follow it. An example, "^pie" will find any words that contain the letters 'p', 'i', and 'e' in that order, like 'piece'. The anchor, ^, will find words that contain the characters that immediately follow it.
+```
 
-$ signifies a string that ends with the characters that precede it. An example, "wed$" would find the word 'followed'.
+```
+'$' signifies a string that ends with the characters that precede it. An example, "wed$" would find the word 'followed'.
+```
 
 ### Quantifiers
 
