@@ -38,23 +38,38 @@ This is how the email regex looks like.
 `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 ```
 
-Our regex has to be wrapped in forward slashes, '/'. Also, each component is put in parantheses,'()'.
+Our regex has to be wrapped in forward slashes, '/'. Also, each component is put in parantheses,'()'. The brackets, '[]', will also be disussed later in [Bracket Expressions](#bracket-expressions).
 
 If we loosely break up this regex:
 - a-z: this string can contain lowercase letters from a to z.
 - 0-9: this string can contain numbers from 0 to 9.
-- _.-: this string can contain an underscore, period and a hyphen. (We exclude the backslash since its purpose is to allow the period to be used as a parameter not as an 'all, will be explained in Anchors)
+- _.-: this string can contain an underscore, period and a hyphen. (We exclude the backslash since its purpose is to allow the period (.) to be used as a parameter not as a meta character.)
 
 followed by an @, then:
--
+- \d: any digit character, including numbers from 0 to 9.
+- a-z: this string can contain lowercase letters from a to z.
+- .-: this string can contain a period and hyphen.
+
+followed by a ., then:
+- a-z: this string can contain lowercase letters from a to z.
+- .: this string can contain a period.
 
 ### Anchors
 
+The characters ^ and $ are considered anchors.
+
+^ signifies a string that begins with the characters that follow it. An example, "^pie" will find any words that contain the letters 'p', 'i', and 'e' in that order, like 'piece'. The anchor, ^, will find words that contain the characters that immediately follow it.
+
+$ signifies a string that ends with the characters that precede it. An example, "wed$" would find the word 'followed'.
+
 ### Quantifiers
+
 
 ### Grouping Constructs
 
 ### Bracket Expressions
+
+Anything inside square brackets ([]) are characters we wish to match. All components in our regex are contained in distinct square brackets. These 'components' are called bracket expressions. Bracket expressions, in other words, outline the charactes we want to include in our search.
 
 ### Character Classes
 
