@@ -18,11 +18,6 @@ After splitting the email into these three components we can see that they respe
 
 Note: In an email there will always be an '@' between the user's chosen name and the domain. Same can be said about a '.' between the domain and the extension.
 
-This is how the email regex looks like.
-
-```
-`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
-```
 
 ## Table of Contents
 
@@ -36,6 +31,22 @@ This is how the email regex looks like.
 - [Character Escapes](#character-escapes)
 
 ## Regex Components
+
+This is how the email regex looks like. 
+
+```
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+```
+
+Our regex has to be wrapped in forward slashes, '/'. Also, each component is put in parantheses,'()'.
+
+If we loosely break up this regex:
+- a-z: this string can contain lowercase letters from a to z.
+- 0-9: this string can contain numbers from 0 to 9.
+- _.-: this string can contain an underscore, period and a hyphen. (We exclude the backslash since its purpose is to allow the period to be used as a parameter not as an 'all, will be explained in Anchors)
+
+followed by an @, then:
+-
 
 ### Anchors
 
