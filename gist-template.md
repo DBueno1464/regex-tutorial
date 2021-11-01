@@ -25,10 +25,6 @@ Note: In an email there will always be an '@' between the user's chosen name and
 - [Quantifiers](#quantifiers)
 - [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions](#bracket-expressions)
-- [Character Classes](#character-classes)
-- [The OR Operator](#the-or-operator)
-- [Flags](#flags)
-- [Character Escapes](#character-escapes)
 
 ## Regex Components
 
