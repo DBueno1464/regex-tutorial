@@ -68,9 +68,23 @@ The characters ^ and $ are considered anchors.
 
 ### Quantifiers
 
+The final requirement of the regex that we have yet to talk about is the sequence of characters that appears before the $ anchor ({2,6}). That being said, quantifiers are always at the end of a component inside the square brackets. Meaning the '+' at the end of each component is a quantifier.
 
+Quantifiers set the limits of the string that your regex matches. The quantifiers frequently include the minimum and maximum number of characters that your regex is looking for.
 
-### Grouping Constructs
+Quantifiers are inherently greedy, meaning they match as many occurrences of particular patterns as possible. They include the following:
+
+- *: Matches the pattern zero or more times
+- +: Matches the pattern one or more times
+- ?: Matches the pattern zero or one time
+- {}: Curly brackets can provide three different ways to set limits for a match:
+    - { n }: Matches the pattern exactly n number of times
+    - { n, }: Matches the pattern at least n number of times
+    - { n, x }: Matches the pattern from a minimum of n number of times to a maximum of x number of times
+
+Each of these quantifiers can be made lazy by adding the ? symbol after it, meaning it will match as few occurrences as possible.
+
+In our email regex we have two instances of '+' and that just means those components have to be AT LEAST one character long. Furthermore, in the third and final component we have {2,6} meaning the extension component has to between 2 and 6 characters.
 
 ### Bracket Expressions
 
@@ -78,14 +92,6 @@ Anything inside square brackets ([]) are characters we wish to match. All compon
 
 It's important to note that a bracket expression can be turned into a negative character group by adding the '^' symbol to the beginning of the expression inside the brackets. A common example is matching a string that doesnt include any vowels. The pattern [^aeiouAEIOU] would find any strings that don't include lowercase or uppercase vowels.
 
-### Character Classes
-
-### The OR Operator
-
-### Flags
-
-### Character Escapes
-
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+- https://github.com/DBueno1464
