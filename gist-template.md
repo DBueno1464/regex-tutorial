@@ -69,11 +69,14 @@ The characters ^ and $ are considered anchors.
 ### Quantifiers
 
 
+
 ### Grouping Constructs
 
 ### Bracket Expressions
 
-Anything inside square brackets ([]) are characters we wish to match. All components in our regex are contained in distinct square brackets. These 'components' are called bracket expressions. Bracket expressions, in other words, outline the charactes we want to include in our search.
+Anything inside square brackets ([]) are characters we wish to match. All components in our regex are contained in distinct square brackets. These 'components' are called bracket expressions. Bracket expressions, in other words, outline the charactes we want to include in our search. For example, [ace] will look for a string that includes 'a' or 'c' or 'e', regardless of the length of the string. Meaning, all of these strings would match: 'aaa', 'court', 'octopus' and 'cea'.
+
+It's important to note that a bracket expression can be turned into a negative character group by adding the '^' symbol to the beginning of the expression inside the brackets. A common example is matching a string that doesnt include any vowels. The pattern [^aeiouAEIOU] would find any strings that don't include lowercase or uppercase vowels.
 
 ### Character Classes
 
