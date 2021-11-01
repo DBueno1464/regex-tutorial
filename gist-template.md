@@ -78,9 +78,22 @@ Quantifiers are inherently greedy, meaning they match as many occurrences of par
     - { n, }: Matches the pattern at least n number of times
     - { n, x }: Matches the pattern from a minimum of n number of times to a maximum of x number of times
 
-Each of these quantifiers can be made lazy by adding the ? symbol after it, meaning it will match as few occurrences as possible.
+```
+([a-z0-9_\.-]+)
+```
+Here, the quantifier is '+'.
+```
+([\da-z\.-]+)
+```
+Here, that quantifier is also '+'.
+```
+([a-z\.]{2,6})
+```
+Finally, the quantifier in this component is '{2,6}'. 
 
-In our email regex we have two instances of '+' and that just means those components have to be AT LEAST one character long. Furthermore, in the third and final component we have {2,6} meaning the extension component has to between 2 and 6 characters.
+Each of these quantifiers can be made lazy by adding the ? symbol after it, meaning it will match as few occurrences as possible. For example, the following strings would meet the requirements: 'hi', 'puddle', and 'supercalifragilisticexpialidocious'.
+
+In our email regex we have two instances of '+' and that just means those components have to be AT LEAST one character long. Furthermore, in the third and final component we have {2,6} meaning the extension component has to between 2 and 6 characters. For example, these strings would meet the requirements: 'so', 'pie', 'case', 'march', and 'sauces'.
 
 ### Bracket Expressions
 
